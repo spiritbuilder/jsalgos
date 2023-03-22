@@ -3,17 +3,24 @@ import DoublyLinkedList from "./doublyLinkedList";
 
 let doublyLinkedList = new DoublyLinkedList();
 
-console.log(doublyLinkedList);
 doublyLinkedList.push(10);
 doublyLinkedList.push("SOla");
-doublyLinkedList.traverse();
-//console.log(doublyLinkedList);
 doublyLinkedList.push("Sjla");
-//console.log(doublyLinkedList);
+doublyLinkedList.shift();
 doublyLinkedList.traverse();
-doublyLinkedList.pop();
+console.log("==============");
+doublyLinkedList.unshift("miky");
+doublyLinkedList.insert(3, "Arigato");
 doublyLinkedList.traverse();
-doublyLinkedList.pop();
+console.log("============");
+
+doublyLinkedList.set(2, "set====me ni");
+// console.log(doublyLinkedList.get(3)?.val, "see");
 doublyLinkedList.traverse();
-doublyLinkedList.pop();
-console.log(doublyLinkedList);
+console.log("============");
+// // doublyLinkedList.remove(1);
+// doublyLinkedList.traverse();
+console.log(doublyLinkedList.remove(0))
+console.log("============");
+doublyLinkedList.traverse();
+
