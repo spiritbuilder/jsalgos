@@ -1,9 +1,14 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
+    "noImplicitThis": false,
     "allowJs": true,
     "outDir": "build",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+     "lib": [
+            "es6",
+            "dom"   
+        ],
   },
   "include": ["*"],
   "exclude": ["node_modules"]

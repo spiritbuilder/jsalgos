@@ -164,11 +164,11 @@ class LinkedList {
     }
     let newList = new LinkedList();
     let current = this.head;
-    let i=0
-    while (i<this.length) {
+    let i = 0;
+    while (i < this.length) {
       newList.unshift(current.val);
       current = current.next;
-      i++
+      i++;
     }
     this.head = newList.head;
     this.tail = newList.tail;

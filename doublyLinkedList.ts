@@ -4,10 +4,10 @@ interface Node {
   prev: any;
 }
 
-class Node {
-  val: any;
-  next: any;
-  prev: any;
+class Node implements Node {
+  // val: any;
+  // next: any;
+  // prev: any;
 
   constructor(val: any) {
     this.val = val;

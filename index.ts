@@ -1,26 +1,27 @@
 import LinkedList from "./linkedList";
 import DoublyLinkedList from "./doublyLinkedList";
+import BST from "./BinarySearchTree";
+import { Stack, Queue } from "./Stack_Queue";
+import axios from "axios";
 
-let doublyLinkedList = new DoublyLinkedList();
+let bst = new BST();
 
-doublyLinkedList.push(10);
-doublyLinkedList.push("SOla");
-doublyLinkedList.push("Sjla");
-doublyLinkedList.shift();
-doublyLinkedList.traverse();
-console.log("==============");
-doublyLinkedList.unshift("miky");
-doublyLinkedList.insert(3, "Arigato");
-doublyLinkedList.traverse();
-console.log("============");
+bst.insert(10);
+bst.insert(6);
+bst.insert(15);
+bst.insert(8);
+bst.insert(3);
+bst.insert(20);
+// bst.insert(2);
+// bst.insert(21);
+// bst.insert(22);
+//  bst.insert(26);
 
-doublyLinkedList.set(2, "set====me ni");
-// console.log(doublyLinkedList.get(3)?.val, "see");
-doublyLinkedList.traverse();
-console.log("============");
-// // doublyLinkedList.remove(1);
-// doublyLinkedList.traverse();
-console.log(doublyLinkedList.remove(0))
-console.log("============");
-doublyLinkedList.traverse();
+console.log(bst.find(12));
 
+bst.traverseBFS()
+bst.traverseDFSPreOrder()
+bst.traverseDFSPostOrder()
+bst.traverseDFSInOrder()
+
+console.log(JSON.stringify(bst));
