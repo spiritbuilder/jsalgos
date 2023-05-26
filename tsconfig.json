@@ -5,10 +5,7 @@
     "allowJs": true,
     "outDir": "build",
     "esModuleInterop": true,
-     "lib": [
-            "es6",
-            "dom"   
-        ],
+    "lib": ["es6", "dom","ESNext"]
   },
   "include": ["*"],
   "exclude": ["node_modules"]
