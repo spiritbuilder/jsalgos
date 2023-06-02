@@ -43,15 +43,25 @@ import { feeds, FeedProps } from "./jothings";
 
 //   let;
 // }
-//dashboard.buildwithbnkle.com/projects?&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2luZ1BvbGljaWVzIjpbIl5pYW06KiIsIl5wcm9qZWN0czoqIl0sImRlbnlpbmdQb2xpY2llcyI6W10sIl9pZCI6IjYzZmRmNGY0YzI5ODVkZjJiMjc1OGM3ZSIsIm5hbWUiOiJwb3J0Zm9saW9NYW5hZ2VyIiwiaWF0IjoxNjgyNjc4NjYxLCJleHAiOjE2ODMyODM0NjF9.O12HobAhCmT_9xx_JZOjGl83XZhbvCOeVMrGV478TXk&role=portfolioManager
-// function showurl(url: string) {
-//   console.log(
-//     url +
-//       "projects?&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2luZ1BvbGljaWVzIjpbIl5pYW06KiIsIl5wcm9qZWN0czoqIl0sImRlbnlpbmdQb2xpY2llcyI6W10sIl9pZCI6IjYzZmRmNGY0YzI5ODVkZjJiMjc1OGM3ZSIsIm5hbWUiOiJwb3J0Zm9saW9NYW5hZ2VyIiwiaWF0IjoxNjg0ODM4NTU1LCJleHAiOjE2ODU0NDMzNTV9.nor3SdCWgIcsUSnHbThxlbCWjFyV8leR1SWVx8bNo8U&role=portfolioManager"
-//   );
-// }
+//dashboard.buildwithbnkle.com/projects?&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2luZ1BvbGljaWVzIjpbIl5pYW06KiIsIl5wcm9qZWN0czoqIl0sImRlbnlpbmdQb2xpY2llcyI6W10sIl9pZCI6IjYzZmRmNGY0YzI5ODVkZjJiMjc1OGM3ZSIsIm5hbWUiOiJwb3J0Zm9saW9NYW5hZ2VyIiwiaWF0IjoxNjg1NzAzMzkzLCJleHAiOjE2ODYzMDgxOTN9.JRqfWiqiWfjaqnQe6ithx5F51544uJr6-jM466mwGs8&role=portfolioManager
+function showurl(url: string) {
+  console.log(
+    url +
+      "projects?&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2luZ1BvbGljaWVzIjpbIl5pYW06KiIsIl5wcm9qZWN0czoqIl0sImRlbnlpbmdQb2xpY2llcyI6W10sIl9pZCI6IjYzZmRmNGY0YzI5ODVkZjJiMjc1OGM3ZSIsIm5hbWUiOiJwb3J0Zm9saW9NYW5hZ2VyIiwiaWF0IjoxNjg0ODM4NTU1LCJleHAiOjE2ODU0NDMzNTV9.nor3SdCWgIcsUSnHbThxlbCWjFyV8leR1SWVx8bNo8U&role=portfolioManager"
+  );
+}
 
-// showurl("https://bnkle-fe2-git-ft-timfinancials-bnkleruby.vercel.app/");
+showurl("https://bnkle-fe2-git-ft-timfinancials-bnkleruby.vercel.app/");
+
+function showforProfessional(url:string){
+  console.log(
+    url +
+      "projects?&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2luZ1BvbGljaWVzIjpbIl5pYW06cHJvZmVzc2lvbmFsczpwb3Jmb2xpb1Byb2plY3RzOioiLCJeaWFtOnByb2Zlc3Npb25hbHM6cGxhbnRzQW5kRXF1aXBtZW50czoqIiwiXmlhbTpwcm9mZXNzaW9uYWxzOnRlYW06KiIsIl5pYW06cHJvZmVzc2lvbmFsczpwbGFudHNBbmRFcXVpcG1lbnRzOioiLCJecHJvamVjdHM6cG93cyoiLCJeaWFtOm1pc2M6KiIsIl5pYW06cHJvZmVzc2lvbmFsczpQT1NUOmdlbmVyYXRlLXNpZ25lZC11cmwqIiwiXmlhbTpwcm9mZXNzaW9uYWxzOkdFVDpnZXQtZGV0YWlscyoiLCJpYW06cHJvZmVzc2lvbmFsczpHRVQ6cG9ydEZvbGlvUHJvamVjdHMqIiwiaWFtOnByb2Zlc3Npb25hbHM6UE9TVDpwb3J0Rm9saW9Qcm9qZWN0cyoiLCJpYW06cHJvZmVzc2lvbmFsczpQQVRDSDpwb3J0Rm9saW9Qcm9qZWN0cyoiLCJpYW06cHJvZmVzc2lvbmFsczpERUxFVEU6cG9ydEZvbGlvUHJvamVjdHMqIiwiaWFtOnByb2Zlc3Npb25hbHM6R0VUOnBsYW50c0FuZEVxdWlwbWVudHMqIiwiaWFtOnByb2Zlc3Npb25hbHM6UE9TVDpwbGFudHNBbmRFcXVpcG1lbnRzKiIsImlhbTpwcm9mZXNzaW9uYWxzOlBBVENIOnBsYW50c0FuZEVxdWlwbWVudHMqIiwiaWFtOnByb2Zlc3Npb25hbHM6REVMRVRFOnBsYW50c0FuZEVxdWlwbWVudHMqIiwiaWFtOnByb2Zlc3Npb25hbHM6R0VUOnRlYW0qIiwiaWFtOnByb2Zlc3Npb25hbHM6UE9TVDp0ZWFtKiIsImlhbTpwcm9mZXNzaW9uYWxzOlBBVENIOnRlYW0qIiwiaWFtOnByb2Zlc3Npb25hbHM6REVMRVRFOnRlYW0qIiwicHJvamVjdHM6YmlkczpQQVRDSDppbnZpdGVzOioiLCJwcm9qZWN0czpiaWRzOkdFVDoqIiwicHJvamVjdHM6YmlkczpQQVRDSDoqIiwicHJvamVjdDpicmllZnM6UE9TVDoqIiwicHJvamVjdHM6ZmlsZXM6UE9TVDpkb3dubG9hZCIsInByb2plY3RzOmZpbGVzOlBPU1Q6dXBsb2FkIiwicHJvamVjdHM6c3VibWlzc2lvbnM6KiIsImlhbTpwcm9mZXNzaW9uYWxzOlBBVENIOnVwZGF0ZSIsInByb2plY3RzOmZpbGVzOkdFVDpzb3J0IiwiXmlhbTpwcm9mZXNzaW9uYWxzOkdFVDpwcm9mZXNzaW9uYWwqIiwiXmlhbTpwcm9mZXNzaW9uYWxzOkdFVDpwcm9mZXNzaW9uYWwqIiwicHJvamVjdHM6dGFza3M6UE9TVDphZGQiLCJecHJvamVjdHM6dGFza3M6R0VUKiIsIl5wcm9qZWN0czp0YXNrczpQQVRDSCoiLCJecHJvamVjdHM6c3ViLXRhc2tzOlBPU1QqIiwiXnByb2plY3RzOnN1Yi10YXNrczpHRVQqIiwiXnByb2plY3RzOnN1Yi10YXNrczpQQVRDSCoiLCJpYW06dXNlcnM6R0VUOmZpbHRlcioiLCJecHJvamVjdHM6cG93cyIsIl5iaWRzOmJpZHM6R0VUOioiLCJeYmlkczpiaWRzOlBBVENIOioiLCJecHJvamVjdHM6dGFza3M6R0VUOioiLCJwcm9qZWN0czpwcm9qZWN0czpQT1NUOmZpbmFuY2lhbHMiLCJwcm9qZWN0czpwcm9qZWN0czpHRVQ6ZmluYW5jaWFsczoqIiwicHJvamVjdHM6cHJvamVjdHM6UEFUQ0g6ZmluYW5jaWFsczoqIiwicHJvamVjdHM6cHJvamVjdHM6REVMRVRFOmZpbmFuY2lhbHM6Kjp0cmFuY2g6KiJdLCJkZW55aW5nUG9saWNpZXMiOltdLCJfaWQiOiI2M2ZlMDQ4OWMyOTg1ZGYyYjI3NThjYjciLCJuYW1lIjoiY29udHJhY3RvciIsImlhdCI6MTY4NTYzMjE0OSwiZXhwIjoxNjg2MjM2OTQ5fQ.rfWPvcnVFHAHCuwJjsLdutepedlFZCkMp1Rk38d1q8c&role=contractor"
+  )
+}
+
+// showforProfessional("https://bnkle-fe2-git-ft-timfinancials-bnkleruby.vercel.app/")
+
 
 // console.log(new Date());
 
@@ -86,90 +96,6 @@ import { feeds, FeedProps } from "./jothings";
 // ))
 
 // console.log(.0.toLocaleString())
-const checkifAnagram = (str1: string, str2: string) => {
-  let counter: { [key: string]: number } = {};
-  if (str1 === str2) return false;
-  if (!str1 || !str2) return false;
-  for (let i = 0; i < str1.length; i++) {
-    if (counter[str1[i] as string]) {
-      counter[str1[i]]++;
-    } else {
-      counter[str1[i]] = 1;
-    }
-  }
 
-  for (let i = 0; i < str2.length; i++) {
-    if (counter[str2[i]]) {
-      counter[str2[i]]--;
-    } else {
-      return false;
-    }
-  }
-  for (let x of Object.values(counter)) {
-    if (x > 0 || x < 0) {
-      return false;
-    }
-  }
+//I am testing
 
-  return true;
-};
-const countAnagrams = (str: string) => {
-  const strArr = str.split(" ");
-  console.log(strArr);
-  let newArr = [...strArr];
-  let total = 0;
-  while (newArr.length > 0) {
-    let anagrams: string[] = [];
-    for (let i = 0; i < newArr.length; i++) {
-      if (i < newArr.length - 1) {
-        for (let j = i + 1; j < newArr.length; j++) {
-          let isAnagram = checkifAnagram(newArr[i], newArr[j]);
-          if (isAnagram && !anagrams.includes(newArr[j])) {
-            anagrams.push(newArr[j]);
-            console.log(anagrams, "anaz");
-          }
-        }
-      }
-      delete newArr[i];
-      newArr = newArr.filter((m) => !anagrams.includes(m));
-    }
-    console.log(newArr);
-    total += anagrams.length;
-  }
-
-  console.log(total);
-};
-
-countAnagrams("aa aa dog dog dgo dgo gdo");
-
-let myX: { [key: string]: any } = {
-  name: "joy",
-  school: "Eksu",
-  lovers:["victor","MyJames"],
-  countries:[{
-    name:"US",
-    population:3000
-  }]
-};
-const change = (ref:any,value:any)=>{
-  ref.name =value
-}
-const onchange = (key: string, value: any,isArray?:boolean, method?:"push"|"pull") => {
-  if(!isArray){
-  myX[key] = value;
-  }else{
-    if(method==="push"){
-      myX[key].push(value)
-    }else{
-
-    }
-  }
-
-};
-
-onchange("name","Joy")
-onchange("school","Akungba")
-onchange("lovers","Jesus",true,"push")
-change(myX.countries[0],"LAgos")
-
-console.log(myX)
