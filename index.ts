@@ -3,12 +3,16 @@
 // import BST from "./BinarySearchTree";
 // import { Stack, Queue } from "./Stack_Queue";
 // import BinaryHeap from "./BinaryHeap";
-// import axios from "axios";
+import axios from "axios";
 // import PriorityQueue from "./PriorityQueue";
-
+import path from "path";
+import { ana } from "./anagrams";
 // let pq = new PriorityQueue();
 import { feeds, FeedProps } from "./jothings";
 import Graph from "./Graph";
+import jt from "jsonwebtoken";
+const https = require("https");
+console.log(ana);
 
 // pq.enqueue("go out", 3);
 // pq.enqueue("think", 0);
@@ -52,7 +56,7 @@ function showurl(url: string) {
   );
 }
 
-showurl("https://bnkle-fe2-git-ft-timfinancials-bnkleruby.vercel.app/");
+showurl("https://bnkle-fe2-git-ft-timmeetings-bnkleruby.vercel.app/");
 
 function showforProfessional(url: string) {
   console.log(
@@ -61,74 +65,13 @@ function showforProfessional(url: string) {
   );
 }
 
-// showforProfessional("https://bnkle-fe2-git-ft-timfinancials-bnkleruby.vercel.app/")
-
-// console.log(new Date());
-
-//63fe3ca7c2985df2b2758dc2
-
-// let feed = feeds;
-// const sortIntoRepos = (feed: FeedProps[]) => {
-//   let group: any = {};
-
-//   for (let i = 0; i < feed.length; i++) {
-//     if (group[feed[i].repoName]) {
-//       group[feed[i].repoName].push(feed[i].title);
-//     } else {
-//       group[feed[i].repoName] = [feed[i].title];
-//     }
-//   }
-
-//   return group;
-// };
-// let sorted = sortIntoRepos(feed);
-
-// console.log(sorted);
-
-//console.log(Object.keys(sorted).map(m=><COmponent reponame = {m} titles = {sorted[m]} />))
-
-// console.log(Object.keys(sorted));
-
-//        <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
-
-// let x=[{name:"2023-04-05"},{name:"2022-04-03"}]
-// console.log(x.sort((a, b) => a.name>b.name?1:b.name>a.name?-1:0
-// ))
-
-// console.log(.0.toLocaleString())
-
-//I am testing 9db98fef6f48933676afc24379bf144c316b770a  I added sometin again
-
-// "Awaiting Approval",
-//         "Not started",
-//         "In progress",
-//         "Completed",
-//         "Verified",
-
-// const name=()=>{
-//   setTimeout(()=>{
-//     console.log("see")
-//   })
-// }
-
-// const spark=()=>{
-//   name()
-//   console.log("Adesola")
-//   return
-// }
+// showforProfessional("https://bnkle-fe2-git-ft-timmeetings-bnkleruby.vercel.app/")
+// import path from "path"
+// console.log(path.join(__dirname,"../jsalgos"))
+let times = 100000
+for(let i=0;i<times;i++){
+ let res =  axios.get("https://www.google.com/search?q=fintafrica.com+fintafrica")
+ console.log(res,i)
+}
 
 
-// spark()
-
-// let G = new Graph()
-
-// console.log(G.addVertex("s"))
-// console.log(G.addVertex("b"))
-// console.log(G.addVertex("c"))
-// console.log(G.addEdge("s","c"))
-// console.log(G.addEdge("b","c"))
-// console.log(G.addEdge("s","b"))
-// console.log(G.removeVertex("b"))
-// console.log(G.removeEdge("b","c"))
-
-//I am adding things
