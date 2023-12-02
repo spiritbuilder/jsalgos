@@ -9,6 +9,7 @@ import path from "path";
 import { ana } from "./anagrams";
 // let pq = new PriorityQueue();
 import { feeds, FeedProps } from "./jothings";
+// import Address from "address-validator"
 import Graph from "./Graph";
 import jt from "jsonwebtoken";
 const https = require("https");
@@ -68,10 +69,96 @@ function showforProfessional(url: string) {
 // showforProfessional("https://bnkle-fe2-git-ft-timmeetings-bnkleruby.vercel.app/")
 // import path from "path"
 // console.log(path.join(__dirname,"../jsalgos"))
-let times = 100000
-for(let i=0;i<times;i++){
- let res =  axios.get("https://www.google.com/search?q=fintafrica.com+fintafrica")
- console.log(res,i)
-}
+// let times = 100000
+// for(let i=0;i<times;i++){
+//  let res =  axios.get("https://www.google.com/search?q=fintafrica.com+fintafrica")
+//  console.log(res,i)
+// }
+
+// let x = {
+//   data:
+//   message: "ID Read Successfully!",
+//   status: 200,
+// };
+
+let data: restype[] = [
+  { Confidence: 96.98274993896484, FIRST_NAME: "TIMOTHY" },
+  { Confidence: 96.55171203613281, LAST_NAME: "OLULEKE" },
+  { Confidence: 94.8182373046875, MIDDLE_NAME: "AYOKUNNU" },
+  { Confidence: 99.16246795654297, SUFFIX: "" },
+  { CITY_IN_ADDRESS: "", Confidence: 99.17204284667969 },
+  { Confidence: 99.1810531616211, ZIP_CODE_IN_ADDRESS: "" },
+  { Confidence: 99.16168212890625, STATE_IN_ADDRESS: "" },
+  { Confidence: 99.16735076904297, STATE_NAME: "" },
+  { Confidence: 96.87952423095703, DOCUMENT_NUMBER: "B50640147" },
+  { Confidence: 87.39724731445312, EXPIRATION_DATE: "21 SEP /SEPT 33" },
+  { Confidence: 96.58818817138672, DATE_OF_BIRTH: "24 JUN /JUIN 95" },
+  { Confidence: 76.57709503173828, DATE_OF_ISSUE: "22 SEP /SEPT 23" },
+  { Confidence: 98.47882843017578, ID_TYPE: "PASSPORT" },
+  { Confidence: 99.18010711669922, ENDORSEMENTS: "" },
+  { Confidence: 99.16741180419922, VETERAN: "" },
+  { Confidence: 99.16817474365234, RESTRICTIONS: "" },
+  { CLASS: "", Confidence: 99.17239379882812 },
+  { ADDRESS: "", Confidence: 99.17485809326172 },
+  { COUNTY: "", Confidence: 99.17536926269531 },
+  { Confidence: 97.32061767578125, PLACE_OF_BIRTH: "IBADAN" },
+  {
+    Confidence: 65.4001235961914,
+    MRZ_CODE:
+      "P<NGAOLULEKE<<TIMOTHY<AYOKUNNU<<<<<<<<<<<<<<B506401472NGA9506240M330921070150143708<<<44",
+  },
+];
+type restype = { [key: "Confidence" | string]: string | number };
+
+let str = "12/13/1992";
+let mx = "24/06/1995";
+let fixed = mx.split("/").reverse().join("/");
+console.log(new Date(str), new Date(mx), new Date(fixed));
+// /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!_])(.{8,})$/
+let regex = /(([A-Z]{1,})([a-z]{1,})([0-9]{1,})([.?@!()*<>]{1,}))(.{8,})/;
+let s = "Ayokunnu.2";
+console.log("\n==========\n");
+console.log(regex.test(s));
+
+// const grabdetails = (data: restype[]) => {
+//   let importantFields = [
+//     "FIRST_NAME",
+//     "LAST_NAME",
+//     "MIDDLE_NAME",
+//     "DATE_OF_BIRTH",
+//     "EXPIRATION_DATE",
+//   ];
+//   let obj: restype = {};
+//   for (let i of data) {
+//     for (let j of Object.keys(i)) {
+//       if (importantFields.includes(j)) {
+//         let key = j === "MIDDLE_NAME" ? "mid_name" : j.toLowerCase();
+//         obj[key] = i[j];
+//       }
+//     }
+//   }
+//   return obj;
+// };
+
+// console.log(grabdetails(data));
 
 
+let g = new Graph();
+g.addVertex("A");
+g.addVertex("B");
+g.addVertex("C");
+g.addVertex("D");
+g.addVertex("E");
+g.addVertex("F");
+g.addEdge("A", "B");
+g.addEdge("A", "C");
+g.addEdge("B", "D");
+g.addEdge("E", "C");
+g.addEdge("E", "D");
+g.addEdge("B", "D");
+g.addEdge("D", "F");
+g.addEdge("F", "E");
+console.log(g);
+// g.dfs("A");
+// g.dfs_it("A")
+g.bfs("A")
