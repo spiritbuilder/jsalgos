@@ -12,6 +12,7 @@ import { feeds, FeedProps } from "./jothings";
 // import Address from "address-validator"
 import Graph from "./Graph";
 import jt from "jsonwebtoken";
+import WeightedGraph from "./DijkstraAlgo";
 const https = require("https");
 console.log(ana);
 
@@ -142,23 +143,21 @@ console.log(regex.test(s));
 
 // console.log(grabdetails(data));
 
-
-let g = new Graph();
+let g = new WeightedGraph();
 g.addVertex("A");
 g.addVertex("B");
 g.addVertex("C");
 g.addVertex("D");
 g.addVertex("E");
 g.addVertex("F");
-g.addEdge("A", "B");
-g.addEdge("A", "C");
-g.addEdge("B", "D");
-g.addEdge("E", "C");
-g.addEdge("E", "D");
-g.addEdge("B", "D");
-g.addEdge("D", "F");
-g.addEdge("F", "E");
-console.log(g);
+g.addEdge("A", "B", 4);
+g.addEdge("A", "C", 2);
+g.addEdge("B", "E", 3);
+g.addEdge("C", "D", 2);
+g.addEdge("C", "F", 4);
+g.addEdge("D", "E", 3);
+g.addEdge("D", "F", 1);
+g.addEdge("E", "F", 1);
+console.log(g.Dijkstra("A", "E"));
 // g.dfs("A");
 // g.dfs_it("A")
-g.bfs("A")
