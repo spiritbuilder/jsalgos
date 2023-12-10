@@ -13,7 +13,8 @@ import { feeds, FeedProps } from "./jothings";
 import Graph from "./Graph";
 import jt from "jsonwebtoken";
 import WeightedGraph from "./DijkstraAlgo";
-const https = require("https");
+import { DynamicFib, DynamicFibTabulated, Fib } from "./dynamicProgramming";
+
 console.log(ana);
 
 // pq.enqueue("go out", 3);
@@ -143,21 +144,38 @@ console.log(regex.test(s));
 
 // console.log(grabdetails(data));
 
-let g = new WeightedGraph();
-g.addVertex("A");
-g.addVertex("B");
-g.addVertex("C");
-g.addVertex("D");
-g.addVertex("E");
-g.addVertex("F");
-g.addEdge("A", "B", 4);
-g.addEdge("A", "C", 2);
-g.addEdge("B", "E", 3);
-g.addEdge("C", "D", 2);
-g.addEdge("C", "F", 4);
-g.addEdge("D", "E", 3);
-g.addEdge("D", "F", 1);
-g.addEdge("E", "F", 1);
-console.log(g.Dijkstra("A", "E"));
+// let g = new WeightedGraph();
+// g.addVertex("A");
+// g.addVertex("B");
+// g.addVertex("C");
+// g.addVertex("D");
+// g.addVertex("E");
+// g.addVertex("F");
+// g.addEdge("A", "B", 4);
+// g.addEdge("A", "C", 2);
+// g.addEdge("B", "E", 3);
+// g.addEdge("C", "D", 2);
+// g.addEdge("C", "F", 4);
+// g.addEdge("D", "E", 3);
+// g.addEdge("D", "F", 1);
+// g.addEdge("E", "F", 1);
+// console.log(g.Dijkstra("A", "E"));
+
+// let x = {
+//   joiningInfo: {
+//     eventUri:
+//       "https://api.calendly.com/scheduled_events/92ca3e58-12b3-4cd5-afed-2ab97fb53c5a",
+//     eventUrl:
+//       "https://us02web.zoom.us/j/8162792177?pwd=dXVFbGVQdnR2ZURqdnZLblBsMitIUT09",
+//   },
+//   firstName: "Timo",
+//   lastName: "Ayo",
+//   email: "olaitan@mailinator.com",
+//   startTime: "2023-10-24T15:00:00.000000Z",
+// };
 // g.dfs("A");
 // g.dfs_it("A")
+
+console.log(Fib(30), "Fib");
+// console.log(DynamicFib(100000), "Fib");
+console.log(DynamicFibTabulated(1000000), "Fib");
