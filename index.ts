@@ -13,7 +13,13 @@ import { feeds, FeedProps } from "./jothings";
 import Graph from "./Graph";
 import jt from "jsonwebtoken";
 import WeightedGraph from "./DijkstraAlgo";
-import { DynamicFib, DynamicFibTabulated, Fib } from "./dynamicProgramming";
+import {
+  DynamicFib,
+  DynamicFibTabulated,
+  Fib,
+  bubbleSort,
+  selectionSort,
+} from "./dynamicProgramming";
 
 console.log(ana);
 
@@ -179,3 +185,5 @@ console.log(regex.test(s));
 console.log(Fib(30), "Fib");
 // console.log(DynamicFib(100000), "Fib");
 console.log(DynamicFibTabulated(1000000), "Fib");
+console.log(selectionSort([3, 5, 6, 0, 2]), "Complete Matters");
+console.log(bubbleSort([11,3, 5, 6, 0, 2,10]), "bubble");

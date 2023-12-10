@@ -32,6 +32,39 @@ let DynamicFibTabulated = (n: number): number => {
 //-Bubble SOrt looops n-squared times swaping as it goes till the max gets to the end can be optimized by reducing the arrays to be sorted after each pass
 //
 
+const selectionSort = (arr: number[]) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let min = arr[i];
+    let minIndex = i;
+    for (let j = i; j < arr.length; j++) {
+      if (min > arr[j]) {
+        min = arr[j];
+        minIndex = j;
+      }
+    }
+    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+  }
+  return arr;
+};
 
+const bubbleSort = (arr: number[]) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 1; j < arr.length - i; j++) {
+      if (arr[j - 1] > arr[j]) {
+        [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]];
+      }
+    }
+  }
+  return arr;
+};
 
-export { Fib, DynamicFib, DynamicFibTabulated };
+const insertionSort = (arr: number[]) => {};
+
+export {
+  Fib,
+  DynamicFib,
+  DynamicFibTabulated,
+  selectionSort,
+  bubbleSort,
+  insertionSort,
+};
