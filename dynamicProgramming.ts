@@ -58,7 +58,26 @@ const bubbleSort = (arr: number[]) => {
   return arr;
 };
 
-const insertionSort = (arr: number[]) => {};
+const insertionSort = (arr: number[]) => {
+  if (arr.length === 1) return arr;
+  for (let i = 1; i < arr.length; i++) {
+    let currentVal = arr[i];
+    let lastIndex: number = i - 1;
+    for (let j = i - 1; j > -1; j--) {
+      console.log(arr[j], currentVal);
+      if (arr[j] < currentVal) {
+        break;
+      } else {
+        arr[j + 1] = arr[j];
+        //update last index
+        lastIndex = j;
+        console.log(arr);
+      }
+    }
+    arr[lastIndex] = currentVal;
+  }
+  return arr;
+};
 
 export {
   Fib,

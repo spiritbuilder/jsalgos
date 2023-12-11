@@ -18,6 +18,7 @@ import {
   DynamicFibTabulated,
   Fib,
   bubbleSort,
+  insertionSort,
   selectionSort,
 } from "./dynamicProgramming";
 
@@ -184,6 +185,7 @@ console.log(regex.test(s));
 
 console.log(Fib(30), "Fib");
 // console.log(DynamicFib(100000), "Fib");
-console.log(DynamicFibTabulated(1000000), "Fib");
-console.log(selectionSort([3, 5, 6, 0, 2]), "Complete Matters");
-console.log(bubbleSort([11,3, 5, 6, 0, 2,10]), "bubble");
+// console.log(DynamicFibTabulated(1000000), "Fib");
+// console.log(selectionSort([3, 5, 6, 0, 2]), "Complete Matters");
+// console.log(bubbleSort([11, 3, 5, 6, 0, 2, 10]), "bubble");
+console.log(insertionSort([11, 3, 5,2,8]), "insert");
