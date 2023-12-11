@@ -79,6 +79,39 @@ const insertionSort = (arr: number[]) => {
   return arr;
 };
 
+const mergeSort = (arr: number[]): any[] => {
+  if (arr.length <= 1) return arr;
+  const merge = (arr1: number[], arr2: number[]): number[] => {
+    let results = [];
+    let i = 0;
+    let j = 0;
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] < arr2[j]) {
+        results.push(arr1[i]);
+        i++;
+      } else {
+        results.push(arr2[j]);
+        j++;
+      }
+    }
+    while (i < arr1.length) {
+      results.push(arr1[i]);
+      i++;
+    }
+    while (j < arr2.length) {
+      results.push(arr2[j]);
+      j++;
+    }
+
+    return results;
+  };
+
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+  return merge(left, right);
+};
+
 export {
   Fib,
   DynamicFib,
@@ -86,4 +119,5 @@ export {
   selectionSort,
   bubbleSort,
   insertionSort,
+  mergeSort,
 };

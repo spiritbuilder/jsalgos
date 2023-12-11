@@ -19,6 +19,7 @@ import {
   Fib,
   bubbleSort,
   insertionSort,
+  mergeSort,
   selectionSort,
 } from "./dynamicProgramming";
 
@@ -189,3 +190,4 @@ console.log(Fib(30), "Fib");
 // console.log(selectionSort([3, 5, 6, 0, 2]), "Complete Matters");
 // console.log(bubbleSort([11, 3, 5, 6, 0, 2, 10]), "bubble");
 console.log(insertionSort([11, 3, 5,2,8]), "insert");
+console.log(mergeSort([11, 3, 5, 2, 8]), "merge");
