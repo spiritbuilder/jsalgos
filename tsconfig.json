@@ -7,6 +7,6 @@
     "esModuleInterop": true,
     "lib": ["es6", "dom","ESNext"]
   },
-  "include": ["*"],
+  "include": ["*","leetcode"],
   "exclude": ["node_modules"]
 }
