@@ -44,8 +44,8 @@ class PriorityQueue {
     let currentPosition = 0;
     while (currentPosition < this.values.length - 1) {
       let current = this.values[currentPosition];
-      let leftChildPosition = (2 * currentPosition) + 1;
-      let rightChildPosition = (2 * currentPosition) + 2;
+      let leftChildPosition = 2 * currentPosition + 1;
+      let rightChildPosition = 2 * currentPosition + 2;
       let leftChild = this.values[leftChildPosition];
       let rightChild = this.values[rightChildPosition];
 

@@ -174,6 +174,25 @@ class LinkedList {
     this.tail = newList.tail;
     return this;
   }
+
+  reverse2() {
+    if (this.length === 0 || this.length === 1) {
+      return this;
+    }
+
+    let newList = new LinkedList();
+
+    let current = this.head;
+
+    while (current) {
+      newList.unshift(current.val);
+      current = current.next;
+    }
+    this.head = newList.head;
+    this.tail = newList.tail;
+
+    return this;
+  }
 }
 
 export default LinkedList;

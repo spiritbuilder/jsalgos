@@ -2,6 +2,7 @@ interface Node {
   val: any;
   next: any;
   prev: any;
+  child: any;
 }
 
 class Node implements Node {

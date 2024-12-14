@@ -1,29 +1,49 @@
-import { debounce, moveZeroToEnd, rotateArray } from "./moveZeroToEnd";
-import { taskPow } from "./taskfile";
-import TicTakToe from "./TicTacToe";
+import { _maxContainer } from "./ztm/max-container";
+import { twoSumArray } from "./ztm/twosum";
+import trapRainWater, { testTrapCalculation } from "./ztm/trapRainwater";
+import { backSpaceCompare } from "./ztm/backspaceCompare";
+import almostPalindrome from "./ztm/almostPalindrome";
+import LinkedList from "./oldfiles/linkedList";
+import DoublyLinkedList from "./oldfiles/doublyLinkedList";
 
-// moveZeroToEnd([1, 2, 0, 4, 3, 0, 5, 0]);
-// moveZeroToEnd([10, 20, 30]);
-// moveZeroToEnd([0, 0]);
+let linkedList = new LinkedList();
 
-rotateArray([10, 20, 30, 40], 3);
-// let before = new Date().getTime();
-// console.log(new Date().getTime());
-// console.log(
-//   debounce(() => {
-//     console.log("I see");
-//     console.log(new Date().getTime() - before);
-//   }, 1000)()
-// );
+linkedList.push("mike");
+linkedList.push("Sola");
+linkedList.shift();
+linkedList.unshift("Mjx");
+linkedList.push("Bosola");
+linkedList.traverse();
+linkedList.unshift("Manda");
+console.log("======");
+linkedList.set(3, "sleep");
+linkedList.traverse();
+console.log("======");
+linkedList.remove(2);
+linkedList.traverse();
+console.log("======");
+linkedList.insert(2, "Insert");
+console.log("======");
+linkedList.traverse();
+console.log("======");
+console.log("About to reverse");
+linkedList.reverse2();
+console.log("======");
+linkedList.traverse();
+linkedList.reverse2();
+console.log("======");
+//linkedList.traverse();
 
-// let allTask = Object.values(taskPow)[0];
+//linkedList.pop()
+// linkedList.traverse();
 
-// const getSubtaskDetails = (subTaskId: string) => {
-//   let allSubtasks = allTask.map((m) => m.subTasks).flat();
+let withChild=()=>({child:{
+  
+}})
 
-//   return allSubtasks.find((m) => m._id === subTaskId);
-// };
+let doublyLinkedList = new DoublyLinkedList();
 
-// console.log(getSubtaskDetails("667c347348d4a6e330c97ef8"));
-
-TicTakToe()
+doublyLinkedList.push(56);
+doublyLinkedList.push(6);
+doublyLinkedList.traverse()
+console.log(doublyLinkedList)

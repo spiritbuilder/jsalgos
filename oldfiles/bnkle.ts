@@ -1,4 +1,4 @@
-import { isMatch } from "./leetcode/regex";
+import { isMatch } from "../leetcode/regex";
 import tokens from "./tokens";
 import { v4 } from "uuid";
 import axios from "axios";
@@ -92,13 +92,11 @@ console.log(
   `3/5 Sylvester Idakwo Crescent, Barnawa G.R.A., Kaduna, Nigeria`.toUpperCase()
 );
 
-
-export const ping =() => {
-    axios({ method: "get", url: "https://jomavapi.onrender.com/" }).then((m) =>
-      console.log(m.data)
-    );
-  }
-
+export const ping = () => {
+  axios({ method: "get", url: "https://jomavapi.onrender.com/" }).then((m) =>
+    console.log(m.data)
+  );
+};
 
 let error = {
   id: 100293,

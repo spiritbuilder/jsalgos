@@ -13,9 +13,9 @@ import { feeds, FeedProps } from "./jothings";
 import Graph from "./Graph";
 import jt from "jsonwebtoken";
 import WeightedGraph from "./DijkstraAlgo";
-import { convert } from "./leetcode/zigzagconversion";
-import reverse from "./leetcode/reverseInteger";
-import myAtoi from "./leetcode/myAtoi";
+import { convert } from "../leetcode/zigzagconversion";
+import reverse from "../leetcode/reverseInteger";
+import myAtoi from "../leetcode/myAtoi";
 import {
   DynamicFib,
   DynamicFibTabulated,
@@ -30,7 +30,7 @@ import {
   longestPalindromeLeet,
   longestPalindromePointer,
 } from "./palindromes";
-import { isMatch } from "./leetcode/regex";
+import { isMatch } from "../leetcode/regex";
 console.log(ana);
 
 // pq.enqueue("go out", 3);
@@ -202,5 +202,3 @@ console.log(regex.test(s));
 
 // console.log(myAtoi(" -67 is mine "));
 console.log(isMatch("s", "."));
-
-
