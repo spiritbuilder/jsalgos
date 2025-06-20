@@ -1,4 +1,4 @@
-interface NodeProps {
+export interface NodeProps {
   value?: any;
   left?: any;
   right?: any;

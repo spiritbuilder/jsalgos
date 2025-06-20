@@ -102,3 +102,131 @@ class Graph {
 }
 
 export default Graph;
+
+
+type WeightedNode = { node: string; weight: number };
+class WeightedGraph {
+  graph: Record<string, WeightedNode[]> = {};
+
+  addVertice(node: string) {
+    this.graph[node] = [];
+  }
+
+  addEdge(v1: string, v2: string, weight: number) {
+    if (
+      this.graph[v1] &&
+      this.graph[v2] &&
+      !this.graph[v1].find((m) => m.node == v2) &&
+      !this.graph[v2].find((m) => m.node == v1) &&
+      v1 !== v2
+    ) {
+      this.graph[v1].push({ node: v2, weight });
+      this.graph[v2].push({ node: v1, weight });
+      return this.graph;
+    }
+    return this.graph;
+  }
+
+  findShortestPath(start: string, end: string) {
+    if (start == end) {
+      return 0;
+    }
+
+    if (!this.graph[start] || !this.graph[end]) {
+      throw new Error("one  of  the nodes not  found");
+    }
+
+    let distances: Record<string, number> = {};
+    let prevs: Record<string, string | null> = { [start]: null };
+
+    let queue: WeightedNode[] = [...this.graph[start]];
+    const sort = () => {
+      queue.sort((a, b) => a.weight - b.weight);
+    };
+
+    for (let i in this.graph) {
+      if (i == start) {
+        distances[i] = 0;
+        prevs[i] = null;
+        queue.push({ node: i, weight: 0 });
+      }
+
+      sort();
+    }
+
+    while (queue.length) {
+      let min = queue.shift() as WeightedNode;
+
+      if (min.node !== end && distances[min.node] >= 0) {
+        for (let nei of this.graph[min.node]) {
+          let newDistance = nei.weight + distances[min.node];
+
+          if (
+            !distances[nei.node] ||
+            (distances[nei.node] && newDistance < distances[nei.node])
+          ) {
+            distances[nei.node] = newDistance;
+            if (nei.node !== start) {
+              prevs[nei.node] = min.node;
+            }
+            queue.push(nei);
+          }
+          sort();
+        }
+      }
+
+      console.log(prevs, distances);
+    }
+
+    let paths = [];
+    let node = end;
+    while (node) {
+      paths.push(node);
+      node = prevs[node] as string;
+    }
+    console.log({
+      path: paths.reverse().join("->"),
+      distance: distances[end] || Infinity,
+    });
+    // console.log(prevs, distances);
+
+    // initiallise distances
+    //  initialise  visited
+    // keep prev to know which is better
+
+    // pick the neighbours of the beginnning node
+
+    // store their distances and set beginning as their prev
+
+    // set push all neighbours to a priority queue
+
+    // pick each one  - check if visited, if not visited -
+  }
+}
+
+let gr = new WeightedGraph();
+for (let i = 0; i < 9; i++) {
+  gr.addVertice(i.toString());
+}
+
+[
+  ["8", "0", 4],
+  ["0", "1", 3],
+  ["8", "4", 8],
+  ["3", "4", 1],
+  ["3", "2", 6],
+  ["2", "5", 1],
+  ["7", "1", 4],
+  ["2", "7", 2],
+  ["0", "3", 2],
+  ["5", "6", 8],
+].map((m) => gr.addEdge(m[0] as string, m[1] as string, m[2] as number));
+
+gr.addVertice("K");
+gr.addVertice("P");
+gr.addEdge("K", "P", 2);
+
+// gr.findShortestPath("8", "7");
+
+// gr.addVertice()
+
